@@ -21,11 +21,13 @@ layer_2/tile_data = PackedInt32Array(393241, 393217, 4, 393242, 393217, 4, 39324
 
 [node name="Jogador" type="CharacterBody2D" parent="."]
 script = ExtResource("2_pq277")
+movement_speed = 7
 
 [node name="Corpo" type="CollisionShape2D" parent="Jogador"]
 shape = SubResource("CircleShape2D_rrvwx")
 
 [node name="Personagem" type="Sprite2D" parent="Jogador/Corpo"]
+unique_name_in_owner = true
 texture = ExtResource("3_4l00a")
 
 [node name="Enquadramento" type="Camera2D" parent="Jogador"]

@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://jlvmursfcs8r"]
+[gd_scene load_steps=5 format=3 uid="uid://jlvmursfcs8r"]
 
 [ext_resource type="TileSet" uid="uid://cg0elo322yx2t" path="res://scenario.tres" id="1_0dplk"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_pq277"]
+[ext_resource type="Texture2D" uid="uid://c2h4a4hoevk7k" path="res://assets/addons/kenney_alien-ufo-pack/shipBlue_manned.png" id="3_4l00a"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_123q3"]
-size = Vector2(50, 50)
+[sub_resource type="CircleShape2D" id="CircleShape2D_rrvwx"]
+radius = 50.0
 
-[node name="World" type="Node2D"]
+[node name="Mundo" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Grade_Cenario" type="TileMap" parent="."]
 tile_set = ExtResource("1_0dplk")
 format = 2
 layer_0/name = "Terreno"
@@ -17,15 +19,13 @@ layer_1/tile_data = PackedInt32Array(327720, 589825, 6, 327721, 589825, 6, 32772
 layer_2/name = "Posterior"
 layer_2/tile_data = PackedInt32Array(393241, 393217, 4, 393242, 393217, 4, 393243, 393217, 4, 393244, 393217, 4, 393245, 393217, 4, 393246, 393217, 4, 393247, 393217, 4, 393248, 393217, 4, 393249, 393217, 4, 393250, 393217, 4, 393251, 393217, 4, 393252, 393217, 4, 393253, 393217, 4, 393254, 393217, 4, 393261, 393217, 4, 393262, 393217, 4, 393263, 393217, 4, 393264, 393217, 4, 393265, 393217, 4, 393266, 393217, 4, 393267, 393217, 4, 393268, 393217, 4, 393269, 393217, 4, 393270, 393217, 4, 393271, 393217, 4, 393272, 393217, 4, 393273, 393217, 4, 393274, 393217, 4, 393275, 393217, 4, 393257, 393217, 4, 393258, 393217, 4)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(139, 108)
+[node name="Jogador" type="CharacterBody2D" parent="."]
+script = ExtResource("2_pq277")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("RectangleShape2D_123q3")
+[node name="Corpo" type="CollisionShape2D" parent="Jogador"]
+shape = SubResource("CircleShape2D_rrvwx")
 
-[node name="ColorRect" type="ColorRect" parent="RigidBody2D/CollisionShape2D"]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-color = Color(0.214878, 0.00050518, 0.505106, 1)
+[node name="Personagem" type="Sprite2D" parent="Jogador/Corpo"]
+texture = ExtResource("3_4l00a")
+
+[node name="Enquadramento" type="Camera2D" parent="Jogador"]

@@ -1,5 +1,13 @@
-Site de onde os assets foram baixados: https://kenney.nl/
+Sites de onde os assets foram baixados:
+	
+	https://kenney.nl/
+	
+	https://itch.io/
+	
+Assets:
 
-Platformer Pack Industrial: https://kenney.nl/assets/platformer-pack-industrial
+	Platformer Pack Industrial: https://kenney.nl/assets/platformer-pack-industrial
 
-Alien UFO Pack: https://kenney.nl/assets/alien-ufo-pack
+	Alien UFO Pack: https://kenney.nl/assets/alien-ufo-pack
+	
+	Free Horizontal Game Backgrounds: https://free-game-assets.itch.io/free-horizontal-game-backgrounds
